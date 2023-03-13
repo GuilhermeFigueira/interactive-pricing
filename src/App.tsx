@@ -25,12 +25,10 @@ function App() {
 				<div className="bg-white shadow-lg rounded-md p-10 h-fit md:w-[40rem]">
 					<div className="flex flex-col items-center gap-10 pb-10 grid_pricing">
 						<div className="text-blue-gray uppercase md:justify-self-start px-6">
-							<h4>
-								{checked
-									? `${(toFixedPrice * 8.33).toFixed(0)}`
-									: `${price * 6.25}`}
-								k Pageviews
-							</h4>
+							{checked
+								? `${(toFixedPrice * 8.33).toFixed(0)}`
+								: `${price * 6.25}`}
+							k Pageviews
 						</div>
 						<div className="order-3 flex items-center gap-3 md:order-2 md:justify-self-end px-6">
 							<h3 className="text-3xl font-bold text-blue-dark">
