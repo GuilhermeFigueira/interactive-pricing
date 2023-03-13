@@ -8,6 +8,8 @@ function App() {
 	const [price, setPrice] = useState(16);
 	const [checked, setChecked] = useState(false);
 
+	let toFixedPrice = parseInt((price * 0.75).toFixed(0));
+
 	return (
 		<div className="bg-background md:bg-contain h-screen bg-no-repeat grid grid-rows-[30%_1fr] bg-blue-very_pale">
 			<header className="flex flex-col justify-center bg-circles bg-no-repeat bg-center w-full text-center gap-3">
@@ -23,12 +25,17 @@ function App() {
 				<div className="bg-white shadow-lg rounded-md p-10 h-fit md:w-[40rem]">
 					<div className="flex flex-col items-center gap-10 pb-10 grid_pricing">
 						<div className="text-blue-gray uppercase md:justify-self-start px-6">
-							<h4>100k Pageviews</h4>
+							<h4>
+								{checked
+									? `${(toFixedPrice * 8.33).toFixed(0)}`
+									: `${price * 6.25}`}
+								k Pageviews
+							</h4>
 						</div>
 						<div className="order-3 flex items-center gap-3 md:order-2 md:justify-self-end px-6">
 							<h3 className="text-3xl font-bold text-blue-dark">
 								{checked
-									? `$${price * 0.75}.00`
+									? `$${(price * 0.75).toFixed(0)}.00`
 									: `$${price}.00`}
 							</h3>
 							<h4 className="text-blue-gray ">/ month</h4>
@@ -71,7 +78,7 @@ function App() {
 						</div>
 					</div>
 
-					<footer className="border-t-2 items-center text-center flex flex-col gap-4 pt-7 md:flex-row md:justify-between md:px-4">
+					<footer className="border-t-2 items-center text-center flex flex-col gap-4 pt-7 md:flex-row md:justify-between md:px-4	">
 						<section className="flex flex-col text-sm text-blue-gray gap-4">
 							<p>
 								<img src={Check} alt="Check Symbol" />
