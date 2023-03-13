@@ -13,7 +13,7 @@ function App() {
 	return (
 		<div className="bg-background md:bg-contain h-screen bg-no-repeat grid grid-rows-[30%_1fr] bg-blue-very_pale">
 			<header className="flex flex-col justify-center bg-circles bg-no-repeat bg-center w-full text-center gap-3">
-				<h1 className="text-2xl font-bold text-blue-dark ">
+				<h1 className="text-3xl font-bold text-blue-dark ">
 					Simple, traffic-based pricing
 				</h1>
 				<div className="flex flex-col md:flex-row text-blue-gray justify-center">
@@ -30,8 +30,8 @@ function App() {
 								: `${price * 6.25}`}
 							k Pageviews
 						</div>
-						<div className="order-3 flex items-center gap-3 md:order-2 md:justify-self-end px-6">
-							<h3 className="text-3xl font-bold text-blue-dark">
+						<div className="order-3 flex items-center gap-3 md:order-2 md:justify-self-end mr-3">
+							<h3 className="text-5xl font-bold text-blue-dark">
 								{checked
 									? `$${(price * 0.75).toFixed(0)}.00`
 									: `$${price}.00`}
@@ -69,8 +69,8 @@ function App() {
 							</Switch.Root>
 							<div className="flex flex-row items-center gap-1">
 								<h4>Yearly Billing</h4>
-								<span className="text-red-light bg-red-gray rounded-full p-1">
-									-25%
+								<span className="text-red-light text-xs bg-red-gray rounded-full p-1 px-2">
+									-25% discount
 								</span>
 							</div>
 						</div>
